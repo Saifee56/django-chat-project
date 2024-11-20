@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}My Django App</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'app/main.css' %}">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-title">Welcome to MyChat</a>
+    <div class="navbar-links">
+        <a href="/login" class="navbar-link">LogIn</a>
+        <a href="/signup" class="navbar-link">SignUp</a>
+    </div>
+  </nav>
+  <div class="hero-section">
+    <h1 class="hero-title">MyChat</h1>
+    <p class="hero-subtitle">Connect, chat, and share with ease!</p>
+  </div>
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <script>
+    // Ensure the cursor disappears as soon as the subtitle pops up
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const heroSubtitle = document.querySelector('.hero-subtitle');
+      
+      // Add a timeout to remove the cursor after the typing animation starts
+      setTimeout(() => {
+        heroSubtitle.classList.add('no-cursor');
+      }, 2000); // 3500ms is the duration of the typing animation
+    });
+  </script>
+</body>
+</html>
