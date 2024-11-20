@@ -1,0 +1,101 @@
+body {
+    background: linear-gradient(to right, #9d4edd, #f472b6, #ef4444); /* Gradient from purple to pink to red */
+    color: white; /* Optional: Ensures text is visible on the gradient */
+    font-family: Arial, sans-serif; /* Optional: Add a clean font */
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: #333; /* Dark background for navbar */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  .navbar-title {
+    color: white; /* White text color */
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .navbar-links {
+    margin-left: auto; /* Push links to the far right */
+    display: flex; /* Flex container for potential multiple links */
+    align-items: center;
+  }
+  
+  /* Individual navbar links */
+  .navbar-link {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 1rem; /* Space between links */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth hover effect */
+  }
+  
+  .navbar-link:hover {
+    color: #f472b6; /* Light pink hover color */
+  }
+  
+  .navbar-link:hover {
+    color: #f472b6; /* Light pink hover color */
+  }
+
+  .hero-section {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #9d4edd, #f472b6, #ef4444);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem; /* Default for small screens */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* Typing animation styles */
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: white;
+    margin-top: 1rem;
+    display: inline-block; /* Makes the text inline to apply typing effect */
+    white-space: nowrap; /* Prevents wrapping of the text */
+    overflow: hidden; /* Ensures the text stays hidden before it's typed */
+    border-right: 2px solid #fff; /* Creates the blinking cursor effect */
+    animation: typing 3.5s steps(30) 1s 1 normal both, blink 0.75s step-end infinite; /* Typing effect with a cursor blink */
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Cursor blink animation */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Remove cursor immediately when subtitle appears */
+  .hero-subtitle.no-cursor {
+    border-right: none; /* Remove the cursor immediately */
+  }
+  /* Content styles */
+  .content {
+    padding: 1rem;
+  }
+  
