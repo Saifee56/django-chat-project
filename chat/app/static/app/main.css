@@ -57,7 +57,7 @@ body {
   .hero-title {
     font-size: 2.5rem; /* Default for small screens */
     font-weight: bold;
-    color: white;
+    color:black;
     margin-bottom: 1rem;
   }
   
@@ -94,6 +94,65 @@ body {
   .hero-subtitle.no-cursor {
     border-right: none; /* Remove the cursor immediately */
   }
+
+  
+  .signup-form {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width of the form */
+    padding: 2rem;
+    background-color:	rgb(28, 28, 29);/* Semi-transparent dark background */
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  
+  .signup-form label {
+    color: #f472b6; /* Light pink color for labels */
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #f472b6; /* Light pink border */
+    background-color: #333; /* Dark background for inputs */
+    color: white; /* Text color inside input */
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .signup-form input:focus {
+    outline: none;
+    border-color: #ff7e5f; /* Border color when focused (a fancy pinkish-orange) */
+  }
+  
+  .signup-form button {
+    width: 100%; /* Full width for the button */
+    padding: 12px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fancy gradient from pink to orange */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: background 0.3s ease; /* Smooth transition for background */
+  }
+  
+  .signup-form button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+  }
+  
+  .signup-form .error-message {
+    background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red for error messages */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  
   /* Content styles */
   .content {
     padding: 1rem;
