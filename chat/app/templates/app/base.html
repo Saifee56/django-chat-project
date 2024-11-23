@@ -11,8 +11,16 @@
   <nav class="navbar">
     <a href="/" class="navbar-title">MyChat</a>
     <div class="navbar-links">
-        <a href="/login" class="navbar-link">LogIn</a>
-        <a href="/signup" class="navbar-link">SignUp</a>
+      {% if request.user.is_authenticated %}
+  <form action="{% url 'logout' %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="rooms-link">LogOut</button>
+  </form>
+{% else %}
+  <a href="{% url 'login' %}" class="navbar-link">LogIn</a>
+  <a href="{% url 'signup' %}" class="navbar-link">SignUp</a>
+{% endif %}
+
     </div>
   </nav>
 

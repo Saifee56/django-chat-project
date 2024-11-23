@@ -151,6 +151,15 @@ body {
     margin-top: 10px;
     text-align: center;
   }
+  .rooms-link {
+    color: white;
+    text-decoration: none; /* Optional: removes underline */
+    transition: color 0.3s; /* Optional: smooth hover effect */
+  }
+  
+  .rooms-link:hover {
+    color: #e5e5e5; /* Light gray (#e5e5e5 corresponds to hover:text-gray-200) */
+  }
   
   
   /* Content styles */

@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-l%_v)sw$fnd934)^9t@ek4gisq$g@x)g8it$$s*xhs6_xd390s
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL='/rooms/'
+LOGIN_URL='/login/'
 
 # Application definition
 
@@ -125,3 +127,5 @@ STATICFILES_DIRS = [BASE_DIR /"app"/ "static"]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Default
+SESSION_COOKIE_SECURE = False  # Set True only if using HTTPS
